@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2500" height="2500" viewBox="0 0 2500 2500">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #01f6ee;
+      }
+    </style>
+  </defs>
+  <circle class="cls-1" cx="1249" cy="1249" r="640"/>
+</svg>
