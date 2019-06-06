@@ -22,7 +22,7 @@ function unfocus() {
     }
 
     
-    anchor.firstElementChild.classList.remove("focus-img");
+    anchor.firstElementChild.lastElementChild.classList.remove("focus-img");
     anchor.lastElementChild.classList.add("hidden");
 
 }
@@ -48,7 +48,7 @@ function focus() {
 
 
 
-    anchor.firstElementChild.classList.add("focus-img");
+    anchor.firstElementChild.lastElementChild.classList.add("focus-img");
     anchor.lastElementChild.classList.remove("hidden");
 
     anchor.querySelector(".closebox").addEventListener("click", unfocus);

@@ -33,6 +33,12 @@ _____Default Planet Classes_________________________________________________ */
     transition: 1s;
 }
 
+.center-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .planet-img {
     position: absolute;
     width: 100%;
@@ -40,8 +46,8 @@ _____Default Planet Classes_________________________________________________ */
 }
 
 .planet-overlay-img {
-    position: absolute;
-    width: 100%;
+    /* position: absolute; */
+    /* width: 100%; */
     opacity: .5;
 }
 
@@ -219,4 +225,17 @@ in front of the navigation bar when zooming in on a planet. */
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
+}
+
+
+/* 
+_____Media Queries__________________________________________________________ */
+/* ======================================================================== */
+@media (max-height: 800px) {
+    #solar-content {
+        position: absolute;
+        width: 100%;
+        height: 800px;
+        overflow: hidden;
+    }
 }

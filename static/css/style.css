@@ -88,8 +88,6 @@ _____Starfield Site Background__________________________________________________
     height: 100%;
     margin: 0;
     padding: 0;
-    background: url("../images/bg.jpg") center;
-    background-size: cover;
 }
 
 /* 
@@ -98,7 +96,7 @@ _____Navigation_________________________________________________________________
 #navigation {
     position: relative;
     width: 100%;
-    max-width: 1000px;
+    max-width: 1024px;
     margin: 0 auto;
     padding: 0;
     padding-top: 40px;
@@ -215,7 +213,7 @@ _____Home Main Content__________________________________________________________
 /* 
 _____Media Queries_____________________________________________________________________________ */
 /* =========================================================================================== */
-@media(max-width: 1000px) {
+@media(max-width: 1024px) {
     #navigation h1 {
         font-size: 2rem;
     }
@@ -246,4 +244,48 @@ _____Media Queries______________________________________________________________
         align-items: center;
     }
 
+}
+
+
+/* Background image size */
+@media (min-width: 0px) {
+    #bg-div {
+        background: url("../images/bg-1024.jpg") center;
+        background-size: cover;
+    }
+}
+
+@media (min-height: 0px) {
+    #bg-div {
+        background: url("../images/bg-1024.jpg") center;
+        background-size: cover;
+    }
+}
+
+@media (min-width: 1025px) {
+    #bg-div {
+        background: url("../images/bg-2048.jpg") center;
+        background-size: cover;
+    }
+}
+
+@media (min-height: 1025px) {
+    #bg-div {
+        background: url("../images/bg-2048.jpg") center;
+        background-size: cover;
+    }
+}
+
+@media (min-width: 2049px) {
+    #bg-div {
+        background: url("../images/bg-4096.jpg") center;
+        background-size: cover;
+    }
+}
+
+@media (min-height: 2049px) {
+    #bg-div {
+        background: url("../images/bg-4096.jpg") center;
+        background-size: cover;
+    }
 }
