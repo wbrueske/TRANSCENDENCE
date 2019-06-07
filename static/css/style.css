@@ -9,7 +9,7 @@ html, body {
     min-width: 300px;
 }
 
-body {
+html {
     background-color: black;
     -webkit-background-size: 100%; 
     -moz-background-size: 100%; 
@@ -266,37 +266,37 @@ _____Media Queries______________________________________________________________
 
 /* Background image size */
 @media (min-width: 0px) {
-    body {
+    html {
         background: url("../images/bg-1024.jpg") center center fixed;
     }
 }
 
 @media (min-height: 0px) {
-    body {
+    html {
         background: url("../images/bg-1024.jpg") center center fixed;
     }
 }
 
 @media (min-width: 1025px) {
-    body {
+    html {
         background: url("../images/bg-2048.jpg") center center fixed;
     }
 }
 
 @media (min-height: 1025px) {
-    body {
+    html {
         background: url("../images/bg-2048.jpg") center center fixed;
     }
 }
 
 @media (min-width: 2049px) {
-    body {
+    html {
         background: url("../images/bg-4096.jpg") center center fixed;
     }
 }
 
 @media (min-height: 2049px) {
-    body {
+    html {
         background: url("../images/bg-4096.jpg") center center fixed;
     }
 }
