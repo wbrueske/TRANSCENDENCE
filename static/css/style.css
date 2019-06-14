@@ -49,7 +49,8 @@ _____Text_______________________________________________________________________
 h1 {
     font-family: qaranta, qaranta_bold, "Exo 2", Arial, Helvetica, sans-serif;
     color: whitesmoke;
-    -webkit-text-size-adjust: 100%;
+    max-height: 1000000em; /* Chrome for Android */
+    -moz-text-size-adjust: none; /* Firefox Mobile */
 }
 
 h2, h3, h4, h5, h6 {
