@@ -1,6 +1,23 @@
 /* 
 _____HTML_____________________________________________________________________________ */
 /* ================================================================================== */
+html {
+    font-family: "Exo 2",
+        /* Safari for OS X and iOS (San Francisco) */
+        -apple-system,
+        /* Chrome < 56 for OS X (San Francisco) */
+        BlinkMacSystemFont,
+        /* Windows */
+        "Segoe UI",
+        /* Android */
+        "Roboto",
+        /* Basic web fallback */
+        "Helvetica Neue", Arial, sans-serif,
+        /* Emoji fonts */
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        color: whitesmoke;
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -30,29 +47,13 @@ _____Text_______________________________________________________________________
 }
 
 h1 {
-    font-family: qaranta, qaranta_bold, Arial, Helvetica, sans-serif;
+    font-family: qaranta, qaranta_bold, "Exo 2", Arial, Helvetica, sans-serif;
     color: whitesmoke;
+    /* font-size: 3em; */
 }
 
 h2, h3, h4, h5, h6 {
-    font-family: taurus_monoregular, Arial, Helvetica, sans-serif;
-    color: whitesmoke;
-}
-
-p, sub {
-    font-family:  "Exo 2",
-        /* Safari for OS X and iOS (San Francisco) */
-        -apple-system,
-        /* Chrome < 56 for OS X (San Francisco) */
-        BlinkMacSystemFont,
-        /* Windows */
-        "Segoe UI",
-        /* Android */
-        "Roboto",
-        /* Basic web fallback */
-        "Helvetica Neue", Arial, sans-serif,
-        /* Emoji fonts */
-        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: taurus_monoregular, "Exo 2", Arial, Helvetica, sans-serif;
     color: whitesmoke;
 }
 
@@ -115,7 +116,7 @@ _____Navigation_________________________________________________________________
     max-width: 1024px;
     margin: 0 auto;
     padding: 0;
-    padding-top: 40px;
+    padding-top: 50px;
     text-align: center;
     /* background: rgba(153, 205, 50, 0.5); */
     z-index: 3;
@@ -126,7 +127,7 @@ _____Navigation_________________________________________________________________
     font-size: 3.25rem;
     padding: 0;
     margin: 0;
-    background: -webkit-linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(94,144,147,1) 50%, rgba(221,233,235,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgb(0,0,0) 0%, rgb(94,144,147) 50%, rgb(221,233,235) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -160,7 +161,7 @@ _____Navigation_________________________________________________________________
 }
 
 .nav-inactive a h3 {
-    color: rgb(180, 180, 180);
+    color: rgb(160, 160, 160);
     transition: color .18s;
     transition: text-shadow .18s;
     /* color: red; */
@@ -201,19 +202,24 @@ _____Home Main Content__________________________________________________________
 /* =============================================================================================== */
 #main-content {
     position: relative;
-    max-width: 1500px;
+    max-width: 2000px;
     width: 100%;
     margin: 0 auto;
     z-index: 2;
     display: flex;
     justify-content: flex-start;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    box-sizing: border-box;
 }
 
 .container {
     display: flex;
     width: 100%;
     /* background: rgba(0, 0, 0, 0.5); */
+    /* background: hsl(188, 20%, 20%); */
     padding: 25px;
+    /* margin-top: 50px; */
 }
 
 .text-container {
@@ -224,11 +230,23 @@ _____Home Main Content__________________________________________________________
     margin: 25px;
     background: rgba(0, 0, 0, 0.6);
     /* background: rgba(47, 52, 54, .6); */
+    /* border: solid 1px rgba(117, 219, 235, 0.75); */
+}
+
+.footer-space {
+    width: 100%;
+    height: 150px;
 }
 
 /* 
 _____Media Queries_____________________________________________________________________________ */
 /* =========================================================================================== */
+@media(max-width: 1250px) {
+    #main-content {
+        padding: 0;
+    }
+}
+
 @media(max-width: 1024px) {
     #navigation h1 {
         font-size: 2rem;
@@ -267,35 +285,83 @@ _____Media Queries______________________________________________________________
 @media (min-width: 0px) {
     #bg-div {
         background: url("../images/bg-1024.jpg") center center fixed;
+        -webkit-background-size: 100%; 
+        -moz-background-size: 100%; 
+        -o-background-size: 100%; 
+        background-size: 100%; 
+        -webkit-background-size: cover; 
+        -moz-background-size: cover; 
+        -o-background-size: cover; 
+        background-size: cover; 
     }
 }
 
 @media (min-height: 0px) {
     #bg-div {
         background: url("../images/bg-1024.jpg") center center fixed;
+        -webkit-background-size: 100%; 
+        -moz-background-size: 100%; 
+        -o-background-size: 100%; 
+        background-size: 100%; 
+        -webkit-background-size: cover; 
+        -moz-background-size: cover; 
+        -o-background-size: cover; 
+        background-size: cover; 
     }
 }
 
 @media (min-width: 1025px) {
     #bg-div {
         background: url("../images/bg-2048.jpg") center center fixed;
+        -webkit-background-size: 100%; 
+        -moz-background-size: 100%; 
+        -o-background-size: 100%; 
+        background-size: 100%; 
+        -webkit-background-size: cover; 
+        -moz-background-size: cover; 
+        -o-background-size: cover; 
+        background-size: cover; 
     }
 }
 
 @media (min-height: 1025px) {
     #bg-div {
         background: url("../images/bg-2048.jpg") center center fixed;
+        -webkit-background-size: 100%; 
+        -moz-background-size: 100%; 
+        -o-background-size: 100%; 
+        background-size: 100%; 
+        -webkit-background-size: cover; 
+        -moz-background-size: cover; 
+        -o-background-size: cover; 
+        background-size: cover; 
     }
 }
 
 @media (min-width: 2049px) {
     #bg-div {
         background: url("../images/bg-4096.jpg") center center fixed;
+        -webkit-background-size: 100%; 
+        -moz-background-size: 100%; 
+        -o-background-size: 100%; 
+        background-size: 100%; 
+        -webkit-background-size: cover; 
+        -moz-background-size: cover; 
+        -o-background-size: cover; 
+        background-size: cover; 
     }
 }
 
 @media (min-height: 2049px) {
     #bg-div {
         background: url("../images/bg-4096.jpg") center center fixed;
+        -webkit-background-size: 100%; 
+        -moz-background-size: 100%; 
+        -o-background-size: 100%; 
+        background-size: 100%; 
+        -webkit-background-size: cover; 
+        -moz-background-size: cover; 
+        -o-background-size: cover; 
+        background-size: cover; 
     }
 }
