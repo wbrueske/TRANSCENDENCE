@@ -39,7 +39,8 @@ _____Encyclopedia Contents Bar__________________________________________________
 
 .contents-header {
     width: 100%;
-    background: hsl(188, 75%, 20%);
+    background: #0c4f59;
+    background: linear-gradient(0deg, rgba(12,79,89,1) 0%, rgba(15,99,112,1) 100%);
     /* background: #75dceb; */
     margin: 0;
     padding: 1em 1em 1em 2em;
@@ -85,22 +86,34 @@ _____Encyclopedia Contents Bar__________________________________________________
     width: 100%;
     /* background: blue; */
     padding: 1em 0 1em 2em;
+    /* background: rgb(13, 87, 98); */
+    background: hsl(188, 76%, 20%);
+    /* background: linear-gradient(0deg, rgba(12,79,89,1) 0%, rgba(13,87,98,1) 100%); */
 }
 
 .e-contents ul li a div:hover {
-    background: rgba(255, 255, 255, .1);
+    /* background: rgba(255, 255, 255, .15); */
+    background: hsl(188, 75%, 40%);
 }
 
 .e-contents ul li ul li a div {
     padding: 1em 0 1em 3em;
-    /* background: red; */
+    /* background: rgba(0, 0, 0, 0.1); */
+    background: none;
+    /* background: #000; */
+}
+
+.e-contents ul li ul li a div:hover {
+    background: hsl(0, 0%, 30%);
+    background: hsl(188, 15%, 25%);
 }
 
 .contents-toggler {
     position: absolute;
+    top: 0;
     right: 0;
     height: 100%;
-    width: 2em;
+    width: 1em;
     background: black;
     visibility: hidden;
 }
@@ -174,7 +187,13 @@ _____Encyclopedia Page__________________________________________________________
     padding: 3rem;
 }
 
-.e-content hr {
+.e-section {
+    padding-top: 1em;
+    clear: both;
+    /* box-sizing: border-box; */
+}
+
+.e-page-content hr {
     clear: both;
 }
 
@@ -185,19 +204,33 @@ _____Encyclopedia Page Images___________________________________________________
     width: 50%;
     float: right;
     box-sizing: border-box;
-    margin: 0 0 2.5em 2.5em;
+    margin: .5em 0 2.5em 2.5em;
+}
+
+.right-img-25 {
+    width: 25%;
+    float: right;
+    box-sizing: border-box;
+    margin: .5em 0 2.5em 2.5em;
+}
+
+.left-img-50 {
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+    margin: .5em 2.5em 2.5em 0;
 }
 
 .left-img-25 {
     width: 25%;
     float: left;
     box-sizing: border-box;
-    margin: 0 2.5em 2.5em 0;
+    margin: .5em 2.5em 2.5em 0;
 }
 
 .full-img {
     width: 100%;
-    margin: 2.5em 0;
+    margin: .5em 0 2.5em 0;
 }
 
 
@@ -209,9 +242,13 @@ _____Encyclopedia Page Images___________________________________________________
 /* 
 _____Media Queries____________________________________________________________________ */
 /* ================================================================================== */
-@media(max-width: 1600px) {
+@media(max-width: 1250px) {
     
     .left-img-25 {
+        width: 50%;
+    }
+    
+    .right-img-25 {
         width: 50%;
     }
 }
@@ -228,8 +265,8 @@ _____Media Queries______________________________________________________________
 
 @media(max-width: 880px) {
     .e-contents {
-        width: 2em;
-        min-width: 2em;
+        width: 1em;
+        min-width: 1em;
     }
 
     .contents-toggler {
@@ -237,6 +274,14 @@ _____Media Queries______________________________________________________________
     }
 
     .right-img-50 {
+        width: 100%;
+    }
+
+    .right-img-25 {
+        width: 100%;
+    }
+
+    .left-img-50 {
         width: 100%;
     }
 
