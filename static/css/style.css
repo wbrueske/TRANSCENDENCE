@@ -156,20 +156,20 @@ _____Navigation_________________________________________________________________
     padding: 0;
 }
 
-.nav-active a h3 {
-    color: white;
-    transition: all .18s;
-}
-
-.nav-inactive a h3 {
+.nav-inactive {
     color: rgb(160, 160, 160);
     transition: color .18s;
     transition: text-shadow .18s;
     /* color: red; */
 }
 
-.nav-active a h3:hover,
-.nav-inactive a h3:hover {
+.nav-active {
+    color: white;
+    transition: all .18s;
+}
+
+.nav-active:hover,
+.nav-inactive:hover {
     color: white;
     text-shadow: 0 0 5px #75dceb;
 }

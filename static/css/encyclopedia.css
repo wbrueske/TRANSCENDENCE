@@ -82,7 +82,41 @@ _____Encyclopedia Contents Bar__________________________________________________
     font-weight: 300;
 }
 
-.e-contents ul li a div {
+.e-contents-arrow-box {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    right: 0em;
+    width: 23%;
+    height: 3.2em;
+    /* background: blue; */
+    background: hsl(188, 76%, 20%);
+    /* padding: .75em; */
+    padding: 1em 0 1em 2em;
+    margin: 0;
+    cursor: pointer;
+}
+
+.e-contents-arrow-down {
+    position: absolute;
+    width: 40%;
+    transform: rotate(90deg);
+    right: 1em;
+    top: 1em;
+    transition: transform .5s;
+}
+
+.e-contents-arrow-up {
+    position: absolute;
+    width: 40%;
+    transform: rotate(270deg);
+    right: 1em;
+    top: 1em;
+    transition: transform .5s;
+}
+
+.e-contents-parent {
+    box-sizing: border-box;
     width: 100%;
     /* background: blue; */
     padding: 1em 0 1em 2em;
@@ -91,19 +125,23 @@ _____Encyclopedia Contents Bar__________________________________________________
     /* background: linear-gradient(0deg, rgba(12,79,89,1) 0%, rgba(13,87,98,1) 100%); */
 }
 
-.e-contents ul li a div:hover {
+.e-contents-parent-highlighted,
+.e-contents-parent:hover,
+.e-contents-arrow-box:hover {
     /* background: rgba(255, 255, 255, .15); */
     background: hsl(188, 75%, 40%);
 }
 
-.e-contents ul li ul li a div {
+
+.e-contents-child {
     padding: 1em 0 1em 3em;
     /* background: rgba(0, 0, 0, 0.1); */
     background: none;
     /* background: #000; */
 }
 
-.e-contents ul li ul li a div:hover {
+.e-contents-child-highlighted,
+.e-contents-child:hover {
     background: hsl(0, 0%, 30%);
     background: hsl(188, 15%, 25%);
 }
@@ -118,7 +156,18 @@ _____Encyclopedia Contents Bar__________________________________________________
     visibility: hidden;
 }
 
+/* @TODO: use JavaScript to change height smoothly, rather than use max-height  */
+.e-contents-children {
+    max-height: 40em;
+    overflow: hidden;
+    transition: max-height .5s;
+}
 
+.e-contents-children-collapsed {
+    max-height: 0;
+    overflow: hidden;
+    /* background: blue; */
+}
 
 
 
