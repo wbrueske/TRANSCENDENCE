@@ -38,6 +38,7 @@ _____Contents Header____________________________________________________________
     height: 100%;
     background: #0c4f59;
     background: linear-gradient(0deg, rgba(12,79,89,1) 0%, rgba(15,99,112,1) 100%);
+    box-sizing: border-box;
 }
 
 .e-contents-header-title h1 {
@@ -285,7 +286,8 @@ _____Media Queries______________________________________________________________
 
     .e-contents-header-title {
         padding: .1em .1em .1em 2em;
-
+        height: 4.28em;
+        box-sizing: border-box;
     }
 
     .e-page {
