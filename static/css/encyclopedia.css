@@ -5,10 +5,6 @@ _____Encyclopedia_______________________________________________________________
 .encyclopedia-container {
     display: flex;
     width: 100%;
-    /* background: rgba(0, 0, 0, 0.5); */
-    /* background: rgb(52, 65, 68); */
-    /* background: hsl(191, 30%, 20%); */
-    /* background: hsl(188, 15%, 25%); */
     background: hsl(188, 15%, 30%);
     /* padding: 3em; */
     margin-top: 50px;
@@ -24,59 +20,81 @@ _____Encyclopedia Contents Bar__________________________________________________
 /* ================================================================================== */
 .e-contents {
     position: relative;
-    /* margin: 1em 0 1em 1em; */
-    /* padding: 1em 0; */
     width: 15em;
     min-width: 15em;
     background: rgba(0, 0, 0, 0.8);
     float: left;
     box-sizing: border-box;
     overflow: hidden;
-    /* border: solid 1px rgba(117, 219, 235, 0.75); */
-    transition: width .5s;
-    transition: min-width .5s;
 }
 
-.contents-header {
+
+/* 
+_____Contents Header__________________________________________________________________ */
+/* ================================================================================== */
+.e-contents-header-title {
+    padding: 1em 1em 1em 2em;
     width: 100%;
+    height: 100%;
     background: #0c4f59;
     background: linear-gradient(0deg, rgba(12,79,89,1) 0%, rgba(15,99,112,1) 100%);
-    /* background: #75dceb; */
-    margin: 0;
-    padding: 1em 1em 1em 2em;
 }
 
-.contents-header h1 {
+.e-contents-header-title h1 {
     font-size: 1.5em;
 }
 
+.e-contents-toggler {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    right: 0em;
+    width: 5em;
+    height: 4.28em;
+    background: hsl(188, 76%, 20%);
+    background: linear-gradient(0deg, rgba(12,79,89,1) 0%, rgba(15,99,112,1) 100%);
+    border-left: solid 2px rgba(0, 0, 0, 0.25);
+    padding: 1em 0 1em 2em;
+    margin: 0;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.e-contents-header-menu {
+    position: absolute;
+    width: 50%;
+    right: 1.125em;
+    top: 1em;
+}
+
+
+/* 
+_____Contents List____________________________________________________________________ */
+/* ================================================================================== */
+/* BUG: The list can be seen closing when changing window size on a desktop.*/
+.e-contents-ul {
+    transition: max-height .5s;
+    max-height: 200em;
+    overflow: hidden;
+    margin: .5em 0 .5em 0;
+}
 
 .e-contents ul {
     position: relative;
-    /* padding-left: 2em; */
     padding: 0;
     width: 100%;
-    /* background: grey; */
     box-sizing: border-box;
 }
 
 .e-contents ul li {
     position: relative;
     list-style: none;
-    /* margin: 1em 0; */
-    /* background: #75dceb; */
-    /* padding: 1em 0 1em 2em; */
     width: 100%;
-    /* background: blue; */
     box-sizing: border-box;
 }
 
 .e-contents ul li a {
     position: relative;
-    /* position: relative; */
-    /* padding: 1em 2em; */
-    /* padding: 1em 0 1em 2em; */
-    /* background: greenyellow; */
     box-sizing: border-box;
     color: white;
     font-weight: 300;
@@ -87,11 +105,9 @@ _____Encyclopedia Contents Bar__________________________________________________
     position: absolute;
     top: 0;
     right: 0em;
-    width: 23%;
-    height: 3.2em;
-    /* background: blue; */
+    width: 3.45em;
+    height: 3.195em;
     background: hsl(188, 76%, 20%);
-    /* padding: .75em; */
     padding: 1em 0 1em 2em;
     margin: 0;
     cursor: pointer;
@@ -118,42 +134,27 @@ _____Encyclopedia Contents Bar__________________________________________________
 .e-contents-parent {
     box-sizing: border-box;
     width: 100%;
-    /* background: blue; */
     padding: 1em 0 1em 2em;
-    /* background: rgb(13, 87, 98); */
     background: hsl(188, 76%, 20%);
-    /* background: linear-gradient(0deg, rgba(12,79,89,1) 0%, rgba(13,87,98,1) 100%); */
 }
 
+.e-contents-header-title:hover,
+.e-contents-toggler:hover,
 .e-contents-parent-highlighted,
 .e-contents-parent:hover,
 .e-contents-arrow-box:hover {
-    /* background: rgba(255, 255, 255, .15); */
     background: hsl(188, 75%, 40%);
 }
 
-
 .e-contents-child {
     padding: 1em 0 1em 3em;
-    /* background: rgba(0, 0, 0, 0.1); */
     background: none;
-    /* background: #000; */
 }
 
 .e-contents-child-highlighted,
 .e-contents-child:hover {
     background: hsl(0, 0%, 30%);
     background: hsl(188, 15%, 25%);
-}
-
-.contents-toggler {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 1em;
-    background: black;
-    visibility: hidden;
 }
 
 /* @TODO: use JavaScript to change height smoothly, rather than use max-height  */
@@ -166,11 +167,7 @@ _____Encyclopedia Contents Bar__________________________________________________
 .e-contents-children-collapsed {
     max-height: 0;
     overflow: hidden;
-    /* background: blue; */
 }
-
-
-
 
 
 /* 
@@ -178,36 +175,16 @@ _____Encyclopedia Page__________________________________________________________
 /* ================================================================================== */
 .e-page {
     position: relative;
-    /* left: 375px; */
     box-sizing: border-box;
-    /* width: 70%; */
-    /* padding: 3rem; */
-    /* margin: 1em 1em 1em 0; */
     background: rgba(0, 0, 0, 0.6);
-    /* background: rgba(47, 52, 54, .6); */
-    /* border: solid 1px rgba(117, 219, 235, 0.75); */
     float: left;
     width: 100%;
-    /* border: solid 1px rgba(117, 219, 235, 0.75) */
 }
 
 .e-banner {
     position: relative;
     box-sizing: border-box;
-    /* padding: 3rem; */
     background: rgba(0, 0, 0, 0.6);
-    /* background: rgba(117, 220, 235, .6); */
-    /* background: url("http://lorempixel.com/1500/1000/"); */
-    /* background: url("../images/placeholder/918b7197f9999993c697038d74bfc38f885ce205.jpg__1280x721_q85_crop_subject_location-835\,444_upscale.jpg"); */
-    -webkit-background-size: 100%; 
-    -moz-background-size: 100%; 
-    -o-background-size: 100%; 
-    background-size: 100%; 
-    -webkit-background-size: cover; 
-    -moz-background-size: cover; 
-    -o-background-size: cover; 
-    background-size: cover; 
-    background-position: center;
     height: 300px;
     width: 100%;
     overflow: hidden;
@@ -225,11 +202,9 @@ _____Encyclopedia Page__________________________________________________________
     font-size: 3.25em;
     position: absolute;
     bottom: 0;
-    /* text-shadow: 1px 1px 5px black; */
     padding-left: 3rem;
     padding-right: 1rem;
     background: rgba(0, 0, 0, 0.8);
-    /* margin: 0; */
 }
 
 .e-page-content {
@@ -239,12 +214,12 @@ _____Encyclopedia Page__________________________________________________________
 .e-section {
     padding-top: 1em;
     clear: both;
-    /* box-sizing: border-box; */
 }
 
 .e-page-content hr {
     clear: both;
 }
+
 
 /* 
 _____Encyclopedia Page Images_________________________________________________________ */
@@ -283,11 +258,6 @@ _____Encyclopedia Page Images___________________________________________________
 }
 
 
-
-
-
-
-
 /* 
 _____Media Queries____________________________________________________________________ */
 /* ================================================================================== */
@@ -303,23 +273,32 @@ _____Media Queries______________________________________________________________
 }
 
 
-/* @media(max-width: 1024px) {
-    .encyclopedia-container {
-        padding: 0;
-    }
-
-} */
-
-
-
 @media(max-width: 880px) {
-    .e-contents {
-        width: 1em;
-        min-width: 1em;
+    .encyclopedia-container {
+        display: initial;
     }
 
-    .contents-toggler {
+    .e-contents {
+        float: none;
+        width: 100%;
+    }
+
+    .e-contents-header-title {
+        padding: .1em .1em .1em 2em;
+
+    }
+
+    .e-page {
+        float: none;
+    }
+
+    .e-contents-toggler {
         visibility: visible;
+    }
+
+    .e-contents-phone-collapsed {
+        max-height: 0;
+        overflow: hidden;
     }
 
     .right-img-50 {

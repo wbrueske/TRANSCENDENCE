@@ -198,24 +198,44 @@ populateEncyclopediaContents();
 let arrowBoxes = document.querySelectorAll(".e-contents-arrow-box");
 
 function encyclopediaContentsExpander() {
-    // Expand the list of children
-    if (this.querySelector(".e-contents-arrow-down")){
-        // Toggle the arrow's class
-        this.firstElementChild.classList.remove("e-contents-arrow-down");
-        this.firstElementChild.classList.add("e-contents-arrow-up");
-        // Expand the children list
-        this.nextElementSibling.classList.remove("e-contents-children-collapsed");
+
+    if (this.classList.contains("e-contents-arrow-box")) {
+        // Expand the list of children
+        if (this.firstElementChild.classList.contains("e-contents-arrow-down")) {
+            // Toggle the arrow's class
+            this.firstElementChild.classList.remove("e-contents-arrow-down");
+            this.firstElementChild.classList.add("e-contents-arrow-up");
+            // Expand the children list
+            this.nextElementSibling.classList.remove("e-contents-children-collapsed");
+        }
+        // Collapse the list of children
+        else {
+            this.firstElementChild.classList.add("e-contents-arrow-down");
+            this.firstElementChild.classList.remove("e-contents-arrow-up");
+            
+            this.nextElementSibling.classList.add("e-contents-children-collapsed");
+        }
+
     }
-    // Collapse the list of children
-    else {
-        this.firstElementChild.classList.add("e-contents-arrow-down");
-        this.firstElementChild.classList.remove("e-contents-arrow-up");
-        
-        this.nextElementSibling.classList.add("e-contents-children-collapsed");
+    else if (this.classList.contains("e-contents-toggler")) {
+        if (this.nextElementSibling.classList.contains("e-contents-phone-collapsed")) {
+            this.nextElementSibling.classList.remove("e-contents-phone-collapsed");
+        }
+        else {
+            this.nextElementSibling.classList.add("e-contents-phone-collapsed");
+
+        }
     }
+
+
+
+
 }
 
 // Add event listener to each dropdown arrow
 arrowBoxes.forEach(function(box) {
     box.addEventListener("click", encyclopediaContentsExpander);
 });
+
+let contentsToggler = document.querySelector(".e-contents-toggler");
+contentsToggler.addEventListener("click", encyclopediaContentsExpander);
