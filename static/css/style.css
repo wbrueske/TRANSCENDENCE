@@ -123,12 +123,21 @@ _____Navigation_________________________________________________________________
     z-index: 3;
 }
 
+.title-div {
+    height: 5em;
+    box-sizing: border-box;
+}
+
 #navigation h1 {
     position: relative;
     font-size: 3.25rem;
     padding: 0;
     margin: .35em 0;
-    background: -webkit-linear-gradient(90deg, rgb(0,0,0) 0%, rgb(94,144,147) 50%, rgb(221,233,235) 100%);
+    /* background: -webkit-linear-gradient(90deg, #000000 0%, #5e9093 50%, #dde9eb 100%); */
+    background: #199eb2;   /* Failsafe color */
+    background: -webkit-gradient(linear, center bottom, center top, color-stop(0%, #000000), color-stop(50%, #5e9093), color-stop(99%, #dde9eb));
+    background: -webkit-linear-gradient(bottom, #000000 0%, #5e9093 50%, #dde9eb 99%);
+    background: linear-gradient(to top, #000000 0%, #5e9093 50%, #dde9eb 99%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -249,6 +258,10 @@ _____Media Queries______________________________________________________________
 }
 
 @media(max-width: 1024px) {
+    .title-div {
+        height: 3.5em;
+    }
+
     #navigation h1 {
         font-size: 2rem;
     }
@@ -269,6 +282,10 @@ _____Media Queries______________________________________________________________
 }
 
 @media(max-width: 450px) {
+    .title-div {
+        height: 2.5em;
+    }
+
     #navigation h1 {
         font-size: 1.5rem;
     }
