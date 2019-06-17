@@ -7,9 +7,9 @@
 // Abbrviated: mn-01
 
 function populateMainNavigation() {
-    let mnid = document.getElementById("mn-id");
-    let mainNavigationUL = document.getElementById("navigation").lastElementChild;
-    let mainNavigationPages = [
+    var mnid = document.getElementById("mn-id");
+    var mainNavigationUL = document.getElementById("navigation").lastElementChild;
+    var mainNavigationPages = [
         {
             "id": "mn-01",
             "name": "Home",
@@ -38,15 +38,18 @@ function populateMainNavigation() {
     ];
 
     mainNavigationPages.forEach(function(page) {
-        let li = document.createElement("li");
+        var li = document.createElement("li");
         if (mnid.getAttribute("data-pageid") === page.id) {
-            li.innerHTML = `<a href=${page.url}><h3 class="nav-active">${page.name}</h3></a>`;
+            li.innerHTML = '<a href="' + page.url + '"><h3 class="nav-active">' + page.name + '</h3></a>';
         }
         else {
-            li.innerHTML = `<a href=${page.url}><h3 class="nav-inactive">${page.name}</h3></a>`;
+            li.innerHTML = '<a href="' + page.url + '"><h3 class="nav-inactive">' + page.name + '</h3></a>';
         }
-        mainNavigationUL.append(li);
+        mainNavigationUL.appendChild(li);
     });
 }
 
-populateMainNavigation();
+
+document.addEventListener('DOMContentLoaded', function(event) {
+    populateMainNavigation();
+});
