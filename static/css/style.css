@@ -49,8 +49,7 @@ _____Text_______________________________________________________________________
 h1 {
     font-family: qaranta, qaranta_bold, "Exo 2", Arial, Helvetica, sans-serif;
     color: whitesmoke;
-    max-height: 1000000em; /* Chrome for Android */
-    -moz-text-size-adjust: none; /* Firefox Mobile */
+    margin: .67em 0;
     box-sizing: border-box;
 }
 
@@ -128,7 +127,7 @@ _____Navigation_________________________________________________________________
     position: relative;
     font-size: 3.25rem;
     padding: 0;
-    margin: 0;
+    margin: .35em 0;
     background: -webkit-linear-gradient(90deg, rgb(0,0,0) 0%, rgb(94,144,147) 50%, rgb(221,233,235) 100%);
     -webkit-background-clip: text;
     background-clip: text;

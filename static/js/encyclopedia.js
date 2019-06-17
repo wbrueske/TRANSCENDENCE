@@ -221,7 +221,7 @@ function encyclopediaContentsExpander() {
 }
 
 
-document.addEventListener('DOMContentLoaded', function(event) {
+document.addEventListener("DOMContentLoaded", function(event) {
     // Populate the encyclopedia contents menu
     populateEncyclopediaContents();
 
