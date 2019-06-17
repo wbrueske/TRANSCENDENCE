@@ -33,7 +33,8 @@ _____Text_______________________________________________________________________
 /* ================================================================================== */
 @font-face {
     font-family: "qaranta_bold";
-    src: url("../fonts/qaranta-bold.woff") format("woff");
+    src: url("../fonts/qaranta-bold.woff2") format("woff2"),
+         url("../fonts/qaranta-bold.woff") format("woff");
     font-weight: bold;
     font-style: normal;
 }
