@@ -51,6 +51,7 @@ h1 {
     color: whitesmoke;
     max-height: 1000000em; /* Chrome for Android */
     -moz-text-size-adjust: none; /* Firefox Mobile */
+    box-sizing: border-box;
 }
 
 h2, h3, h4, h5, h6 {
