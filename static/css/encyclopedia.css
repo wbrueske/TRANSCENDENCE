@@ -107,7 +107,7 @@ _____Contents List______________________________________________________________
     top: 0;
     right: 0em;
     width: 3.45em;
-    height: 3.195em;
+    height: 3.2em;
     background: hsl(188, 76%, 20%);
     padding: 1em 0 1em 2em;
     margin: 0;
@@ -137,6 +137,7 @@ _____Contents List______________________________________________________________
     width: 100%;
     padding: 1em 0 1em 2em;
     background: hsl(188, 76%, 20%);
+    height: 3.2em;
 }
 
 .e-contents-header-title:hover,
