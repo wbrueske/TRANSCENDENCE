@@ -8,7 +8,7 @@
 
 function populateMainNavigation() {
     var mnid = document.getElementById("mn-id");
-    var mainNavigationUL = document.getElementById("navigation").lastElementChild;
+    var mainNavigationUL = document.getElementById("main-nav-ul");
     var mainNavigationPages = [
         {
             "id": "mn-01",
