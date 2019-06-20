@@ -123,7 +123,7 @@ _____Navigation_________________________________________________________________
     z-index: 3;
 }
 
-.title-div {
+#title-div {
     height: 5em;
     box-sizing: border-box;
 }
@@ -285,7 +285,7 @@ _____Media Queries______________________________________________________________
 }
 
 @media(max-width: 600px) {
-    .title-div {
+    #title-div {
         height: 3.5em;
     }
 
@@ -299,7 +299,7 @@ _____Media Queries______________________________________________________________
 }
 
 @media(max-width: 450px) {
-    .title-div {
+    #title-div {
         height: 2.5em;
     }
 
