@@ -288,7 +288,7 @@ _____Media Queries______________________________________________________________
 @media(max-width: 880px) {
     .encyclopedia-container {
         display: initial;
-        /* margin-top: 2em; */
+        margin-top: 0;
     }
 
     .e-contents {

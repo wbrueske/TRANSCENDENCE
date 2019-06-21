@@ -153,25 +153,28 @@ _____Navigation_________________________________________________________________
     /* overflow: -moz-scrollbars-none; */
     /* -ms-overflow-style: none; */
     /* overflow: hidden; */
-    margin-top: -7px;
+    /* margin-top: -7px; */
     background: #000;
     background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.75) 100%);
+    /* background: rgba(0, 0, 0, .5); */
 }
 
 /* #main-nav-container::-webkit-scrollbar { height: 0 !important } */
 
 #main-nav-toggler {
     position: absolute;
-    top: .5em;
-    right: .5em;
-    width: 4em;
-    height: 3em;
+    top: 0;
+    right: 0;
+    width: 5.5em;
+    height: 4.3em;
     /* background: blue; */
-    border-radius: .5em;
-    border: solid 2px #75dceb;
+    /* border-radius: .5em; */
+    /* border: solid 1px #75dceb; */
     /* outline-offset: -.5em; */
     cursor: pointer;
     visibility: hidden;
+    box-sizing: border-box;
+    border-left: solid 2px rgba(0, 0, 0, 0.25);
 }
 
 #main-nav-toggler:hover {
@@ -180,9 +183,9 @@ _____Navigation_________________________________________________________________
 
 .main-nav-menu-button {
     position: absolute;
-    width: 2.25em;
-    top: .4em;
-    right: .9em;
+    width: 2.5em;
+    top: .85em;
+    right: 1.5em;
 }
 
 #navigation ul {
@@ -227,6 +230,12 @@ _____Navigation_________________________________________________________________
     color: white;
     text-shadow: 0 0 5px #75dceb;
 }
+
+.nav-hr-bottom {
+    margin: 0;
+    visibility: hidden;
+}
+
 
 /* 
 _____Home Background Content_____________________________________________________________________________ */
@@ -331,6 +340,7 @@ _____Media Queries______________________________________________________________
     
     .nav-item {
         text-align: left;
+        padding: 0;
         padding-left: 2em;
         height: 0;
         width: 100%;
@@ -340,7 +350,7 @@ _____Media Queries______________________________________________________________
     }
     
     .nav-item-active {
-        height: 4em;
+        height: 3.6em;
         width: 100%;
         /* background: blue; */
         text-align: left;
@@ -348,8 +358,13 @@ _____Media Queries______________________________________________________________
     }
 
     .nav-item-expanded {
-        height: 4em;
+        height: 3.6em;
     }
+    
+    .nav-hr-bottom {
+        visibility: visible;
+    }
+
 }
 
 @media(max-width: 600px) {
