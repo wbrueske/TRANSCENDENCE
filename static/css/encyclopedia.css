@@ -60,11 +60,22 @@ _____Contents Header____________________________________________________________
     visibility: hidden;
 }
 
-.e-contents-header-menu {
+.e-contents-header-arrow-down {
     position: absolute;
-    width: 50%;
-    right: 1.3em;
-    top: .9em;
+    transform: rotate(90deg);
+    width: 2em;
+    right: 1.75em;
+    top: 1.25em;
+    transition: transform .5s;
+}
+
+.e-contents-header-arrow-up {
+    position: absolute;
+    transform: rotate(270deg);
+    width: 2em;
+    right: 1.75em;
+    top: 1.25em;
+    transition: transform .5s;
 }
 
 
@@ -277,6 +288,7 @@ _____Media Queries______________________________________________________________
 @media(max-width: 880px) {
     .encyclopedia-container {
         display: initial;
+        /* margin-top: 2em; */
     }
 
     .e-contents {
@@ -311,7 +323,7 @@ _____Media Queries______________________________________________________________
         visibility: visible;
     }
 
-    .e-contents-phone-collapsed {
+    .e-contents-collapsed {
         max-height: 0;
         overflow: hidden;
     }

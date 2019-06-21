@@ -210,11 +210,15 @@ function encyclopediaContentsExpander() {
         }
     }
     else if (this.classList.contains("e-contents-toggler")) {
-        if (this.nextElementSibling.classList.contains("e-contents-phone-collapsed")) {
-            this.nextElementSibling.classList.remove("e-contents-phone-collapsed");
+        if (this.nextElementSibling.classList.contains("e-contents-collapsed")) {
+            this.nextElementSibling.classList.remove("e-contents-collapsed");
+            this.firstElementChild.classList.remove("e-contents-header-arrow-down");
+            this.firstElementChild.classList.add("e-contents-header-arrow-up");
         }
         else {
-            this.nextElementSibling.classList.add("e-contents-phone-collapsed");
+            this.nextElementSibling.classList.add("e-contents-collapsed");
+            this.firstElementChild.classList.add("e-contents-header-arrow-down");
+            this.firstElementChild.classList.remove("e-contents-header-arrow-up");
 
         }
     }

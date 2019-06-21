@@ -40,16 +40,44 @@ function populateMainNavigation() {
     mainNavigationPages.forEach(function(page) {
         var li = document.createElement("li");
         if (mnid.getAttribute("data-pageid") === page.id) {
-            li.innerHTML = '<a href="' + page.url + '"><h3 class="nav-active">' + page.name + '</h3></a>';
+            li.innerHTML = '<div class="nav-item nav-item-active"><a href="' + page.url + '"><h3 class="nav-active">' + page.name + '</h3></a></div>';
         }
         else {
-            li.innerHTML = '<a href="' + page.url + '"><h3 class="nav-inactive">' + page.name + '</h3></a>';
+            li.innerHTML = '<div class="nav-item"><a href="' + page.url + '"><h3 class="nav-inactive">' + page.name + '</h3></a></div>';
         }
         mainNavigationUL.appendChild(li);
     });
 }
 
 
+
+
+
+
+function navMenu() {
+    var firstNavItem = document.querySelector(".nav-item");
+    var navItems = document.querySelectorAll(".nav-item");
+
+    if (firstNavItem.classList.contains("nav-item-expanded")) {
+        navItems.forEach(function(navItem) {
+            navItem.classList.remove("nav-item-expanded");
+        });
+    }
+    else {
+        navItems.forEach(function(navItem) {
+            navItem.classList.add("nav-item-expanded");
+        });
+    }
+}
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", function(event) {
     populateMainNavigation();
+    
+    var navToggler = document.getElementById("main-nav-toggler");
+
+    navToggler.addEventListener("click", navMenu);
 });
