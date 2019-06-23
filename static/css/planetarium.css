@@ -1,0 +1,241 @@
+/* 
+_____Base Container_________________________________________________________ */
+/* ======================================================================== */
+#solar-content {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    pointer-events: none;
+}
+
+
+/* 
+_____Default Planet Classes_________________________________________________ */
+/* ======================================================================== */
+/* Default sizing of planet anchors and images.  Percentages are used to
+ allow the experience to scale to any screen size.  Media queries (much
+ farther down) curate a different experience on small screens and portrait
+ orientations. */
+/* ======================================================================== */
+.planet-anchor {
+    position: absolute;
+    width: 35%;
+    height: 35%;
+    margin: auto;
+    text-align: center;
+    /* Anchors use Flex to get a center point for positioning content. */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    transition: 1s;
+}
+
+.center-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.planet-img {
+    position: absolute;
+    width: 100%;
+    transition: 1s;
+}
+
+.planet-overlay-img {
+    /* position: absolute; */
+    /* width: 100%; */
+    opacity: .5;
+}
+
+.selector-img {
+    position: absolute;
+    width: 100%;
+}
+
+.planet-selector {
+    opacity: 0;
+    fill: cyan;
+    transition: opacity .2s;
+    pointer-events: all;
+    cursor: pointer;
+}
+
+.planet-selector:hover {
+    opacity: .25;
+}
+
+.planet-name {
+    position: absolute;
+    text-shadow: 1px 1px 5px black;
+    padding-bottom: 65%;
+    transition: .5s;
+}
+
+.gasgiant-img {
+    position: absolute;
+    width: 180%;
+    transition: 1s;
+}
+
+.gasgiant-selector-img {
+    position: absolute;
+    width: 180%;
+}
+
+.salvation-name {
+    position: absolute;
+    text-shadow: 1px 1px 5px black;
+    padding-bottom: 20%;
+    transition: .5s;
+}
+
+
+/* 
+_____Planet Anchors_________________________________________________________ */
+/* ======================================================================== */
+/* Sets the position of the planets. */
+/* ======================================================================== */
+.anchor-salvation {
+    top:-35%;right:0;bottom:0;left:0;
+}
+
+.anchor-athena {
+    top:115%;right:0;bottom:0;left:-90%;
+}
+
+.anchor-zeus {
+    top:115%;right:-90%;bottom:0;left:0;
+}
+
+.anchor-prometheus {
+    top:10%;right:0;bottom:0;left:-45%;
+}
+
+.anchor-demeter {
+    top:10%;right:-45%;bottom:0;left:0;
+}
+
+.anchor-newearth {
+    top:50%;right:0;bottom:0;left:0;
+}
+
+
+/* 
+_____Focus Layer____________________________________________________________ */
+/* ======================================================================== */
+/* The focus layer appears when a planet is clicked.  The background darkens,
+ the planet is centered on the screen, and extra information about the planet
+ pops up in text boxes. */
+/* ======================================================================== */
+#focus-bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    pointer-events: all;
+    transition: .5s;
+}
+
+.focus-elements {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: all;
+    transition: .5s;
+}
+
+/* The unfocused and focused classes are used to move the content 
+in front of the navigation bar when zooming in on a planet. */
+.unfocused {
+    z-index: 2;
+}
+
+.focused {
+    z-index: 10;
+}
+
+.anchor-focus {
+    width: 50%;
+    top:0;right:0;bottom:0;left:0;
+}
+
+.focus-img {
+    position: absolute;
+    width: 100%;
+}
+
+.focus-name {
+    position: absolute;
+    text-shadow: 1px 1px 5px black;
+    top: -60%;
+}
+
+.leftbox {
+    position: absolute;
+    box-sizing: border-box;
+    width: 60%;
+    height: 120%;
+    overflow: auto;
+    left: -40%;
+    text-align: initial;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 1em;
+    pointer-events: all;
+    border: solid 1px #75dceb;
+}
+
+.rightbox {
+    position: absolute;
+    box-sizing: border-box;
+    width: 60%;
+    height: 120%;
+    overflow: auto;
+    right: -40%;
+    text-align: initial;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 1em;
+    pointer-events: all;
+    border: solid 1px #75dceb;
+}
+
+.closebox {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: solid 2px #75dceb;
+    right: -40%;
+    top: -80%;
+    pointer-events: all;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.closebox:hover {
+    background: rgba(116, 219, 235, 0.4);
+}
+
+/* Used to hide things until they are focused. */
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+/* 
+_____Media Queries__________________________________________________________ */
+/* ======================================================================== */
+@media (max-height: 800px) {
+    #solar-content {
+        position: absolute;
+        width: 100%;
+        height: 800px;
+        overflow: hidden;
+    }
+}
