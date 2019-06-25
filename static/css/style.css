@@ -300,7 +300,9 @@ _____Contents List______________________________________________________________
     transition: max-height .5s;
     max-height: 200em;
     overflow: hidden;
-    margin: .5em 0 .5em 0;
+    margin: 0;
+    border-top: solid 1px rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
 }
 
 .contents ul {
@@ -520,7 +522,7 @@ _____Media Queries______________________________________________________________
     }
 
     .social-media-badges {
-        height: 4em;
+        height: 3.6em;
     }
 
     .badge-wrapper {
