@@ -128,7 +128,8 @@ _____Header_____________________________________________________________________
     pointer-events: none;
 }
 
-.title-h1 {
+#site-title {
+    font-family: qaranta, qaranta_bold, "Exo 2", Arial, Helvetica, sans-serif;
     /* color: #75dceb; */
     position: relative;
     font-size: 4.25em;
@@ -248,19 +249,27 @@ _____Contents Bar_______________________________________________________________
 _____Contents Header__________________________________________________________________ */
 /* ================================================================================== */
 .contents-header-title {
-    padding: 1em 1em 1em 2em;
+    /* padding: 3em 1em 1em 2em; */
     width: 100%;
-    height: 100%;
+    height: 6em;
     background: #0c4f59;
     background: linear-gradient(0deg, rgba(12,79,89,1) 0%, rgba(15,99,112,1) 100%);
     box-sizing: border-box;
 }
 
-.contents-header-title h1 {
+#contents-title-contents {
+    font-family: qaranta, qaranta_bold, "Exo 2", Arial, Helvetica, sans-serif;
     font-size: 1.5em;
+    color: white;
+    position: absolute;
+    top: 1.35em;
+    left: 2rem;
 }
 
-#title-transcendence {
+#contents-title-transcendence {
+    font-family: qaranta, qaranta_bold, "Exo 2", Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    color: white;
     visibility: hidden;
     height: 0;
     margin: 0;
@@ -510,7 +519,7 @@ _____Media Queries______________________________________________________________
 }
 
 @media(max-width: 880px) {
-    .title-h1 {
+    #site-title {
         font-size: 3.1em;
     }
 
@@ -532,18 +541,20 @@ _____Media Queries______________________________________________________________
         position: relative;
     }
 
-    #title-contents {
+    #contents-title-contents {
         visibility: hidden;
         height: 0;
         margin: 0;
         padding: 0;
     }
 
-    #title-transcendence {
+    #contents-title-transcendence {
         visibility: visible;
         height: auto;
         margin: .7em 0 0 0;
-        padding: auto;
+        position: absolute;
+        left: 2rem;
+        top: 0;
     }
 
     #page-container {
@@ -556,7 +567,6 @@ _____Media Queries______________________________________________________________
     }
 
     .contents-header-title {
-        padding: .1em .1em .1em 2em;
         height: 4.28em;
         box-sizing: border-box;
     }
@@ -625,21 +635,21 @@ _____Media Queries______________________________________________________________
 }
 
 @media(max-width: 600px) {
-    .title-h1 {
+    #site-title {
         font-size: 2.5rem;
     }
 }
 
 @media(max-width: 450px) {
-    .title-h1 {
+    #site-title {
         font-size: 1.7rem;
     }
 }
 
 @media(max-width: 350px) {
-    #title-transcendence {
+    #contents-title-transcendence {
         font-size: 1.2em;
-        margin: 1em 0 0 0;
+        margin: 1.1em 0 0 0;
     }
 
     .badge-wrapper {
