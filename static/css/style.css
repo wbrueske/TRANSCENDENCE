@@ -16,6 +16,7 @@ html {
         /* Emoji fonts */
         "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
         color: whitesmoke;
+    line-height: 1.25;
 }
 
 html, body {
