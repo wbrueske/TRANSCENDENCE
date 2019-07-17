@@ -16,7 +16,6 @@ html {
         /* Emoji fonts */
         "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
         color: whitesmoke;
-    line-height: 1.25;
 }
 
 html, body {
@@ -58,6 +57,10 @@ h1 {
 h2, h3, h4, h5, h6 {
     font-family: taurus_monoregular, "Exo 2", Arial, Helvetica, sans-serif;
     color: whitesmoke;
+}
+
+p, a {
+    line-height: 1.25;
 }
 
 a {
