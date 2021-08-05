@@ -160,13 +160,13 @@ _____Main Content_______________________________________________________________
 /* =============================================================================================== */
 #main-content {
     position: relative;
-    max-width: 1400px;
+    max-width: 1240px;
     width: 100%;
     margin: 0 auto;
     z-index: 2;
     /* display: flex; */
     justify-content: flex-start;
-    padding: 0 5em;
+    /* padding: 0 5em; */
     box-sizing: border-box;
 }
 
@@ -210,6 +210,7 @@ _____Main Content_______________________________________________________________
     background-color: none;
     height: 100%;
     width: 100%;
+    transition: background-color .2s;
 }
 
 .sm-badge-highlighter:hover {
@@ -257,8 +258,15 @@ _____Contents Header____________________________________________________________
     width: 100%;
     height: 6em;
     background: #0c4f59;
-    background: linear-gradient(0deg, rgba(12,79,89,1) 0%, rgba(15,99,112,1) 100%);
+    background-image: linear-gradient(0deg, rgba(12,79,89,1) 0%, rgba(15,99,112,1) 50%, hsl(188, 75%, 40%) 100%);
     box-sizing: border-box;
+    background-size: 100% 200%;
+    background-position: center bottom;
+    transition: background-position .2s;
+}
+
+.contents-header-title:hover {
+    background-position: center top;
 }
 
 #contents-title-contents {
@@ -350,6 +358,7 @@ _____Contents List______________________________________________________________
     padding: 1em 0 1em 2em;
     margin: 0;
     cursor: pointer;
+    transition: background-color .2s;
 }
 
 .contents-arrow-down {
@@ -376,9 +385,10 @@ _____Contents List______________________________________________________________
     padding: 1em 0 1em 2em;
     background: hsl(188, 76%, 20%);
     height: 3.2em;
+    transition: background-color .2s;
 }
 
-.contents-header-title:hover,
+/* .contents-header-title:hover, */
 .contents-toggler:hover,
 .contents-parent-highlighted,
 .contents-parent:hover,
@@ -389,6 +399,7 @@ _____Contents List______________________________________________________________
 .contents-child {
     padding: 1em 0 1em 3em;
     background: none;
+    transition: background-color .2s;
 }
 
 .contents-child-highlighted,
